@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airowtek Private Limited – Precision Geospatial Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="toast" id="toast">✓ Message sent successfully!</div>
+<nav id="navbar">
+  <div class="logo" href="index.html">
+    <div>
+      Airowtek
+      <span class="logo-sub">Private Limited</span>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="index.html" id="nav-home" class="active">Home</a>
+    <a href="about.html" id="nav-about">About</a>
+    <a href="services.html" id="nav-services">Services</a>
+    <a href="industries.html" id="nav-industries">Industries</a>
+    <a href="contact.html" id="nav-contact" class="nav-cta">Contact Us</a>
+  </div>
+  <div class="hamburger"  id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="showPage('home')">Home</a>
+  <a onclick="showPage('about')">About</a>
+  <a onclick="showPage('services')">Services</a>
+  <a onclick="showPage('industries')">Industries</a>
+  <a onclick="showPage('contact')">Contact Us</a>
+</div>
+
+<div class="page" id="about">
+<section class="about-hero">
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="section-tag">About Airowtek</div>
+      <h1 class="section-title" style="font-size:clamp(2.2rem,5vw,4rem)">Geospatial Expertise<br><span>Built on Precision</span></h1>
+      <p class="section-lead" style="max-width:620px">We are a technology-driven geospatial company focusing on intelligent data processing, 2D/3D mapping, and deep domain expertise to transform how the world sees and understands its landscape.</p>
+    </div>
+  </section>
+
+  <!-- Company Overview -->
+  <section class="section">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start">
+      <div>
+        <div class="section-tag">Our Story</div>
+        <h2 class="section-title" style="font-size:2rem">From Startup to<br><span>Industry Benchmark</span></h2>
+        <p style="color:var(--text-muted);line-height:1.85;margin-bottom:20px">
+          Airowtek Private Limited was founded with a singular vision: to democratize access to precision geospatial data across India. Based in JP Nagar, Bangalore — India's technology heartland — we serve clients across infrastructure, mining, agriculture, smart cities, and more.
+        </p>
+        <p style="color:var(--text-muted);line-height:1.85;margin-bottom:32px">
+          Our team of photogrammetrists, GIS specialists, and BIM engineers works with industry-leading processing software to deliver 2D and 3D outputs that meet international survey standards including ASPRS, ISO 19111, and BIM Level 2.
+        </p>
+        <div style="display:flex;gap:24px;flex-wrap:wrap">
+          <div class="stat-card"><div class="num" style="font-size:1.6rem">10+</div><div class="label">Projects</div></div>
+          <div class="stat-card"><div class="num" style="font-size:1.6rem">5+</div><div class="label">Clients</div></div>
+          <div class="stat-card"><div class="num" style="font-size:1.6rem">20+</div><div class="label">Manpower</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-tag" style="margin-bottom:28px">Our Journey</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <h4>2026 — Founded</h4>
+            <p>Airowtek established in Bangalore with a focus on topographic data processing for the infrastructure sector.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background:var(--blue-primary);box-shadow:0 0 12px rgba(26,111,255,0.5)"></div>
+            <h4>2026 — Team Expansion</h4>
+            <p>Rapidly assembled a highly skilled team of 20+ specialized professionals, including certified photogrammetrists and GIS engineers.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <h4>2026 — Growing Capabilities</h4>
+            <p>Launched comprehensive processing services, from LiDAR data classification to full 3D BIM integration and rendering.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background:var(--blue-primary);box-shadow:0 0 12px rgba(26,111,255,0.5)"></div>
+            <h4>2026 — Rapid Project Delivery</h4>
+            <p>Successfully completed 10+ projects for 5+ major clients, quickly establishing a benchmark for survey-grade precision.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Mission & Vision -->
+  <section class="section">
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="section-header text-center">
+        <div class="section-tag">Purpose</div>
+        <h2 class="section-title">Mission & <span>Vision</span></h2>
+      </div>
+      <div class="mv-grid">
+        <div class="mv-card mission">
+          <div class="mv-icon">🎯</div>
+          <h3>Our Mission</h3>
+          <p>To deliver precise, reliable, and actionable geospatial intelligence that empowers engineers, planners, and decision-makers to build a better, smarter world — on time and within budget.</p>
+          <br><p>We are committed to operating with technical integrity, delivering ISO-compliant outputs, and continuously investing in the latest sensing technologies and processing capabilities.</p>
+        </div>
+        <div class="mv-card vision">
+          <div class="mv-icon">🌐</div>
+          <h3>Our Vision</h3>
+          <p>To be India's most trusted geospatial technology partner — recognized for survey-grade precision, innovative workflows, and transformative impact across infrastructure and environmental sectors.</p>
+          <br><p>We envision a future where every inch of India's landscape is mapped, modelled, and monitored with unprecedented accuracy, enabling data-driven development at national scale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section" style="background:var(--navy-mid);padding:80px 4%">
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="section-header text-center">
+        <div class="section-tag">Our Edge</div>
+        <h2 class="section-title">Why Choose <span>Airowtek</span></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item"><div class="why-num">01</div><div><h4>Survey-Grade Precision</h4><p>High-accuracy deliverables derived from your raw spatial datasets.</p></div></div>
+        <div class="why-item"><div class="why-num">02</div><div><h4>Comprehensive Processing Pipeline</h4><p>From raw spatial data processing to final 2D/3D mapping, GIS, CAD, and BIM deliverables.</p></div></div>
+        <div class="why-item"><div class="why-num">03</div><div><h4>Certified Team</h4><p>Experienced professionals: certified photogrammetrists, 3D modelers, and industry-accredited GIS engineers.</p></div></div>
+        <div class="why-item"><div class="why-num">04</div><div><h4>Rapid Turnaround</h4><p>Optimized cloud processing pipelines ensure project delivery 40% faster than industry average.</p></div></div>
+        <div class="why-item"><div class="why-num">05</div><div><h4>Scalable Processing</h4><p>High-capacity computing infrastructure capable of processing thousands of hectares of spatial data daily.</p></div></div>
+        <div class="why-item"><div class="why-num">06</div><div><h4>Standards Compliant</h4><p>All deliverables conform to ASPRS, IS:1498, ISO 19111 geospatial and BIM Level 2 standards.</p></div></div>
+        <div class="why-item"><div class="why-num">07</div><div><h4>AI-Powered Analytics</h4><p>Machine learning models for automated feature extraction, change detection, and volumetric analysis.</p></div></div>
+        <div class="why-item"><div class="why-num">08</div><div><h4>Pan-India Coverage</h4><p>Active operations across 10+ Indian states with established ground control networks.</p></div></div>
+      </div>
+    </div>
+  </section>
+<footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="cursor:default">
+          Airowtek
+        </div>
+        <p>Precision geospatial intelligence for a smarter world. Photogrammetry, LiDAR, GIS, and BIM solutions from Bangalore, India.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a class="social-btn" href="#"><i class="fab fa-twitter"></i></a>
+          <a class="social-btn" href="#"><i class="fab fa-instagram"></i></a>
+          <a class="social-btn" href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li>Photogrammetry</li>
+            <li>LiDAR Processing</li>
+            <li>Orthophoto</li>
+          <li>CAD / GIS</li>
+            <li>BIM Integration</li>
+            <li>Mobile Mapping</li>
+          </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt" style="color:var(--green-primary)"></i> JP Nagar, Bangalore</li>
+          <li><i class="fas fa-envelope" style="color:var(--green-primary)"></i> Airowtek@gmail.com</li>
+          <li><i class="fas fa-phone" style="color:var(--green-primary)"></i> +91 80 XXXX XXXX</li>
+          <li style="margin-top:16px"><span class="pill-green"><i class="fas fa-circle" style="font-size:0.5rem"></i> Available for Projects</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Airowtek Private Limited. All rights reserved.</p>
+      <p>Designed & built in <span style="color:var(--green-primary)">Bangalore, India</span> · <a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+    </div>
+  </footer>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

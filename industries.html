@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airowtek Private Limited – Precision Geospatial Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="toast" id="toast">✓ Message sent successfully!</div>
+<nav id="navbar">
+  <div class="logo" href="index.html">
+    <div>
+      Airowtek
+      <span class="logo-sub">Private Limited</span>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="index.html" id="nav-home" class="active">Home</a>
+    <a href="about.html" id="nav-about">About</a>
+    <a href="services.html" id="nav-services">Services</a>
+    <a href="industries.html" id="nav-industries">Industries</a>
+    <a href="contact.html" id="nav-contact" class="nav-cta">Contact Us</a>
+  </div>
+  <div class="hamburger"  id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="showPage('home')">Home</a>
+  <a onclick="showPage('about')">About</a>
+  <a onclick="showPage('services')">Services</a>
+  <a onclick="showPage('industries')">Industries</a>
+  <a onclick="showPage('contact')">Contact Us</a>
+</div>
+
+<div class="page" id="industries">
+<section class="ind-hero">
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="section-tag">Our Reach</div>
+      <h1 class="section-title" style="font-size:clamp(2.2rem,5vw,4rem)">Industries We<br><span>Serve</span></h1>
+      <p class="section-lead">Airowtek's geospatial intelligence is deployed across the most demanding industry verticals in India and beyond.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="ind-grid">
+
+      <div class="ind-card">
+        <div class="ind-card-visual" style="background:linear-gradient(135deg,#071c3f,#0a2a1a)">
+          <svg width="100%" height="100%" viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- Bridge / road infrastructure -->
+            <path d="M0 140 L340 140" stroke="rgba(0,212,163,0.3)" stroke-width="1.5"/>
+            <path d="M0 120 Q85 100 170 120 Q255 140 340 120" stroke="rgba(0,212,163,0.5)" stroke-width="2" fill="none"/>
+            <!-- Pylons -->
+            <line x1="120" y1="50" x2="120" y2="140" stroke="rgba(0,212,163,0.7)" stroke-width="2"/>
+            <line x1="220" y1="50" x2="220" y2="140" stroke="rgba(0,212,163,0.7)" stroke-width="2"/>
+            <!-- Cables -->
+            <line x1="120" y1="50" x2="60" y2="120" stroke="rgba(0,212,163,0.35)" stroke-width="1"/>
+            <line x1="120" y1="50" x2="90" y2="120" stroke="rgba(0,212,163,0.35)" stroke-width="1"/>
+            <line x1="120" y1="50" x2="150" y2="120" stroke="rgba(0,212,163,0.35)" stroke-width="1"/>
+            <line x1="220" y1="50" x2="190" y2="120" stroke="rgba(0,212,163,0.35)" stroke-width="1"/>
+            <line x1="220" y1="50" x2="250" y2="120" stroke="rgba(0,212,163,0.35)" stroke-width="1"/>
+            <line x1="220" y1="50" x2="280" y2="120" stroke="rgba(0,212,163,0.35)" stroke-width="1"/>
+            <text x="170" y="165" text-anchor="middle" fill="rgba(0,212,163,0.4)" font-size="8" font-family="monospace">INFRASTRUCTURE CORRIDOR</text>
+          </svg>
+        </div>
+        <div class="ind-card-body">
+          <h3><i class="fas fa-road" style="color:var(--green-primary)"></i> Infrastructure</h3>
+          <p>Road networks, highways, railways, bridges, and corridor mapping for NHAI, RVNL, and state PWDs.</p>
+          <div class="ind-tags">
+            <span class="ind-tag">Highway Mapping</span>
+            <span class="ind-tag">Bridge 3D Models</span>
+            <span class="ind-tag">Corridor Mapping</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-card-visual" style="background:linear-gradient(135deg,#0a1f38,#0d1f10)">
+          <svg width="100%" height="100%" viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- Urban grid -->
+            <g stroke="rgba(26,111,255,0.3)" stroke-width="0.8" fill="none">
+              <line x1="80" y1="0" x2="80" y2="180"/><line x1="160" y1="0" x2="160" y2="180"/>
+              <line x1="240" y1="0" x2="240" y2="180"/>
+              <line x1="0" y1="60" x2="340" y2="60"/><line x1="0" y1="120" x2="340" y2="120"/>
+            </g>
+            <g fill="rgba(26,111,255,0.15)" stroke="rgba(26,111,255,0.5)" stroke-width="1">
+              <rect x="10" y="10" width="58" height="42"/><rect x="90" y="10" width="58" height="42"/>
+              <rect x="170" y="10" width="58" height="42"/><rect x="250" y="10" width="58" height="42"/>
+              <rect x="10" y="70" width="58" height="42"/><rect x="90" y="70" width="58" height="42"/>
+              <rect x="170" y="70" width="58" height="42"/><rect x="250" y="70" width="58" height="42"/>
+            </g>
+            <circle cx="170" cy="90" r="30" fill="rgba(0,212,163,0.08)" stroke="rgba(0,212,163,0.4)" stroke-width="1.5"/>
+            <text x="170" y="165" text-anchor="middle" fill="rgba(26,111,255,0.5)" font-size="8" font-family="monospace">URBAN MASTER PLAN</text>
+          </svg>
+        </div>
+        <div class="ind-card-body">
+          <h3><i class="fas fa-city" style="color:var(--blue-primary)"></i> Urban Planning</h3>
+          <p>Master plan preparation, land use analysis, zoning studies, and change detection for municipal authorities.</p>
+          <div class="ind-tags">
+            <span class="ind-tag">Master Plans</span>
+            <span class="ind-tag">Land Use</span>
+            <span class="ind-tag">Change Detection</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-card-visual" style="background:linear-gradient(135deg,#1a1005,#0d1205)">
+          <svg width="100%" height="100%" viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- Mining pit contours -->
+            <ellipse cx="170" cy="90" rx="140" ry="70" fill="none" stroke="rgba(255,165,0,0.3)" stroke-width="1"/>
+            <ellipse cx="170" cy="90" rx="110" ry="55" fill="none" stroke="rgba(255,165,0,0.4)" stroke-width="1"/>
+            <ellipse cx="170" cy="90" rx="80" ry="40" fill="none" stroke="rgba(255,165,0,0.5)" stroke-width="1.5"/>
+            <ellipse cx="170" cy="90" rx="50" ry="25" fill="none" stroke="rgba(255,165,0,0.7)" stroke-width="1.5"/>
+            <ellipse cx="170" cy="90" rx="25" ry="12" fill="rgba(255,165,0,0.15)" stroke="rgba(255,165,0,0.8)" stroke-width="2"/>
+            <!-- Haul road -->
+            <path d="M310 30 Q250 60 200 90" stroke="rgba(200,150,50,0.5)" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <text x="170" y="165" text-anchor="middle" fill="rgba(255,165,0,0.4)" font-size="8" font-family="monospace">OPEN-PIT MINE MAPPING</text>
+          </svg>
+        </div>
+        <div class="ind-card-body">
+          <h3><i class="fas fa-mountain" style="color:#f59e0b"></i> Mining</h3>
+          <p>Open-pit volume calculations, haul road mapping, stockpile monitoring, and subsidence detection.</p>
+          <div class="ind-tags">
+            <span class="ind-tag">Volume Calc</span>
+            <span class="ind-tag">Pit Mapping</span>
+            <span class="ind-tag">Stockpile Monitor</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-card-visual" style="background:linear-gradient(135deg,#061a0a,#0a1f0a)">
+          <svg width="100%" height="100%" viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- Field grid -->
+            <g fill="none">
+              <rect x="10" y="10" width="75" height="75" fill="rgba(100,200,80,0.12)" stroke="rgba(100,200,80,0.4)" stroke-width="1"/>
+              <rect x="95" y="10" width="75" height="75" fill="rgba(80,180,60,0.18)" stroke="rgba(80,180,60,0.4)" stroke-width="1"/>
+              <rect x="180" y="10" width="75" height="75" fill="rgba(60,160,40,0.22)" stroke="rgba(60,160,40,0.4)" stroke-width="1"/>
+              <rect x="265" y="10" width="65" height="75" fill="rgba(100,200,80,0.14)" stroke="rgba(100,200,80,0.4)" stroke-width="1"/>
+              <rect x="10" y="95" width="75" height="75" fill="rgba(80,180,60,0.2)" stroke="rgba(80,180,60,0.4)" stroke-width="1"/>
+              <rect x="95" y="95" width="75" height="75" fill="rgba(60,160,40,0.25)" stroke="rgba(60,160,40,0.4)" stroke-width="1"/>
+              <rect x="180" y="95" width="75" height="75" fill="rgba(100,200,80,0.15)" stroke="rgba(100,200,80,0.4)" stroke-width="1"/>
+              <rect x="265" y="95" width="65" height="75" fill="rgba(80,180,60,0.18)" stroke="rgba(80,180,60,0.4)" stroke-width="1"/>
+            </g>
+            <!-- NDVI color bar -->
+            <defs>
+              <linearGradient id="ndvi" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#ff4444"/>
+                <stop offset="50%" stop-color="#ffff00"/>
+                <stop offset="100%" stop-color="#44ff44"/>
+              </linearGradient>
+            </defs>
+            <rect x="60" y="160" width="220" height="8" rx="2" fill="url(#ndvi)" opacity="0.7"/>
+            <text x="170" y="175" text-anchor="middle" fill="rgba(100,200,80,0.5)" font-size="8" font-family="monospace">NDVI MULTISPECTRAL ANALYSIS</text>
+          </svg>
+        </div>
+        <div class="ind-card-body">
+          <h3><i class="fas fa-seedling" style="color:#22c55e"></i> Agriculture</h3>
+          <p>Crop health monitoring, NDVI/NDRE processing, irrigation planning, and yield estimation analysis.</p>
+          <div class="ind-tags">
+            <span class="ind-tag">NDVI Mapping</span>
+            <span class="ind-tag">Crop Health</span>
+            <span class="ind-tag">Yield Analysis</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-card-visual" style="background:linear-gradient(135deg,#060f1e,#0a1f38)">
+          <svg width="100%" height="100%" viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- Smart city connected nodes -->
+            <g>
+              <circle cx="170" cy="90" r="20" fill="rgba(0,212,163,0.15)" stroke="rgba(0,212,163,0.7)" stroke-width="2"/>
+              <circle cx="80" cy="45" r="12" fill="rgba(26,111,255,0.15)" stroke="rgba(26,111,255,0.6)" stroke-width="1.5"/>
+              <circle cx="260" cy="45" r="12" fill="rgba(26,111,255,0.15)" stroke="rgba(26,111,255,0.6)" stroke-width="1.5"/>
+              <circle cx="80" cy="135" r="12" fill="rgba(26,111,255,0.15)" stroke="rgba(26,111,255,0.6)" stroke-width="1.5"/>
+              <circle cx="260" cy="135" r="12" fill="rgba(26,111,255,0.15)" stroke="rgba(26,111,255,0.6)" stroke-width="1.5"/>
+              <circle cx="170" cy="30" r="10" fill="rgba(0,212,163,0.1)" stroke="rgba(0,212,163,0.5)" stroke-width="1.5"/>
+              <circle cx="170" cy="150" r="10" fill="rgba(0,212,163,0.1)" stroke="rgba(0,212,163,0.5)" stroke-width="1.5"/>
+              <!-- Connections -->
+              <line x1="170" y1="70" x2="80" y2="57" stroke="rgba(0,212,163,0.3)" stroke-width="1"/>
+              <line x1="170" y1="70" x2="260" y2="57" stroke="rgba(0,212,163,0.3)" stroke-width="1"/>
+              <line x1="170" y1="110" x2="80" y2="123" stroke="rgba(0,212,163,0.3)" stroke-width="1"/>
+              <line x1="170" y1="110" x2="260" y2="123" stroke="rgba(0,212,163,0.3)" stroke-width="1"/>
+              <line x1="170" y1="70" x2="170" y2="40" stroke="rgba(0,212,163,0.3)" stroke-width="1"/>
+              <line x1="170" y1="110" x2="170" y2="140" stroke="rgba(0,212,163,0.3)" stroke-width="1"/>
+              <!-- Pulse -->
+              <circle cx="170" cy="90" r="35" fill="none" stroke="rgba(0,212,163,0.2)" stroke-width="1">
+                <animate attributeName="r" values="20;50;20" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.5;0;0.5" dur="3s" repeatCount="indefinite"/>
+              </circle>
+            </g>
+            <text x="170" y="168" text-anchor="middle" fill="rgba(0,212,163,0.4)" font-size="8" font-family="monospace">SMART CITY GIS NETWORK</text>
+          </svg>
+        </div>
+        <div class="ind-card-body">
+          <h3><i class="fas fa-network-wired" style="color:var(--green-primary)"></i> Smart Cities</h3>
+          <p>Base map creation, 3D city modelling, utility GIS, and digital twin data for smart city missions.</p>
+          <div class="ind-tags">
+            <span class="ind-tag">3D City Model</span>
+            <span class="ind-tag">Digital Twin</span>
+            <span class="ind-tag">Utility GIS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-card-visual" style="background:linear-gradient(135deg,#071a2a,#0a1520)">
+          <svg width="100%" height="100%" viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- Utility towers and lines -->
+            <!-- Towers -->
+            <g stroke="rgba(255,165,0,0.6)" stroke-width="1.5" fill="none">
+              <line x1="60" y1="140" x2="60" y2="60"/>
+              <line x1="50" y1="70" x2="70" y2="70"/>
+              <line x1="50" y1="85" x2="70" y2="85"/>
+              <line x1="55" y1="60" x2="65" y2="60"/>
+              <line x1="170" y1="140" x2="170" y2="55"/>
+              <line x1="160" y1="65" x2="180" y2="65"/>
+              <line x1="160" y1="80" x2="180" y2="80"/>
+              <line x1="165" y1="55" x2="175" y2="55"/>
+              <line x1="280" y1="140" x2="280" y2="60"/>
+              <line x1="270" y1="70" x2="290" y2="70"/>
+              <line x1="270" y1="85" x2="290" y2="85"/>
+              <line x1="275" y1="60" x2="285" y2="60"/>
+            </g>
+            <!-- Power lines -->
+            <g stroke="rgba(255,165,0,0.4)" stroke-width="1" fill="none">
+              <path d="M50 70 Q115 78 160 65" /><path d="M180 65 Q228 54 270 70"/>
+              <path d="M50 85 Q115 92 160 80" /><path d="M180 80 Q228 68 270 85"/>
+            </g>
+            <!-- Pipeline below -->
+            <rect x="20" y="148" width="300" height="10" rx="5" fill="rgba(100,200,220,0.12)" stroke="rgba(100,200,220,0.4)" stroke-width="1"/>
+            <text x="170" y="172" text-anchor="middle" fill="rgba(255,165,0,0.4)" font-size="8" font-family="monospace">TRANSMISSION CORRIDOR PROCESSING</text>
+          </svg>
+        </div>
+        <div class="ind-card-body">
+          <h3><i class="fas fa-bolt" style="color:#f59e0b"></i> Utilities</h3>
+          <p>Transmission line mapping, pipeline corridor processing, and utility asset inventory using LiDAR and photogrammetry data.</p>
+          <div class="ind-tags">
+            <span class="ind-tag">T-Line Mapping</span>
+            <span class="ind-tag">Pipeline Mapping</span>
+            <span class="ind-tag">Asset Inventory</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Industries Stats -->
+  <section class="section" style="background:var(--navy-mid);padding:70px 4%">
+    <div style="max-width:1200px;margin:0 auto;text-align:center">
+      <div class="section-tag" style="justify-content:center">Our Impact</div>
+      <h2 class="section-title">Scale That <span>Speaks</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:48px">
+        <div style="padding:32px;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius)">
+          <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:900;color:var(--green-primary)">50,000+</div>
+          <div style="color:var(--text-muted);margin-top:8px;font-size:0.9rem">Hectares Processed</div>
+        </div>
+        <div style="padding:32px;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius)">
+          <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:900;color:var(--blue-primary)">5,000+ km</div>
+          <div style="color:var(--text-muted);margin-top:8px;font-size:0.9rem">Corridor Length Mapped</div>
+        </div>
+        <div style="padding:32px;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius)">
+          <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:900;color:var(--green-primary)">1B+</div>
+          <div style="color:var(--text-muted);margin-top:8px;font-size:0.9rem">LiDAR Points Processed</div>
+        </div>
+        <div style="padding:32px;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius)">
+          <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:900;color:var(--blue-primary)">200+</div>
+          <div style="color:var(--text-muted);margin-top:8px;font-size:0.9rem">BIM Models Delivered</div>
+        </div>
+      </div>
+    </div>
+  </section>
+<footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="cursor:default">
+          Airowtek
+        </div>
+        <p>Precision geospatial intelligence for a smarter world. Photogrammetry, LiDAR, GIS, and BIM solutions from Bangalore, India.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a class="social-btn" href="#"><i class="fab fa-twitter"></i></a>
+          <a class="social-btn" href="#"><i class="fab fa-instagram"></i></a>
+          <a class="social-btn" href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li>Photogrammetry</li>
+          <li>LiDAR Processing</li>
+          <li>Orthophoto</li>
+          <li>CAD / GIS</li>
+          <li>BIM Integration</li>
+          <li>Mobile Mapping</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt" style="color:var(--green-primary)"></i> JP Nagar, Bangalore</li>
+          <li><i class="fas fa-envelope" style="color:var(--green-primary)"></i> Airowtek@gmail.com</li>
+          <li><i class="fas fa-phone" style="color:var(--green-primary)"></i> +91 80 XXXX XXXX</li>
+          <li style="margin-top:16px"><span class="pill-green"><i class="fas fa-circle" style="font-size:0.5rem"></i> Available for Projects</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Airowtek Private Limited. All rights reserved.</p>
+      <p>Designed & built in <span style="color:var(--green-primary)">Bangalore, India</span> · <a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+    </div>
+  </footer>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
