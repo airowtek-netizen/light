@@ -1,0 +1,23 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="cutout">
+      <rect width="64" height="64" fill="white" />
+      <path d="M -5 50 Q 25 32 50 18" fill="none" stroke="black" stroke-width="7" />
+    </mask>
+  </defs>
+  
+  <rect width="64" height="64" rx="14" fill="#040c1a" />
+  
+  <!-- 'A' centered -->
+  <!-- system-ui naturally falls back to nice thick sans-serif fonts which is perfect for an A -->
+  <text x="32" y="50" font-family="'Outfit', system-ui, sans-serif" font-size="46" font-weight="900" fill="#ffffff" text-anchor="middle" mask="url(#cutout)">A</text>
+  
+  <!-- Swoosh -->
+  <path d="M -5 54 Q 25 32 50 16" fill="none" stroke="#00d4a3" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M -2 58 Q 28 35 50 16" fill="none" stroke="#1a6fff" stroke-width="1.2" stroke-linecap="round" />
+
+  <!-- Airplane -->
+  <g transform="translate(50, 16) rotate(-35)">
+    <path d="M -8 -4 L 10 0 L -8 4 L -5 0 Z" fill="#ffffff" />
+  </g>
+</svg>

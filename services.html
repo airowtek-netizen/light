@@ -5,9 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Airowtek Private Limited – Precision Geospatial Solutions</title>
+  <link rel="icon" type="image/svg+xml" href="asset/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -16,10 +19,10 @@
 
   <div class="toast" id="toast">✓ Message sent successfully!</div>
   <nav id="navbar">
-    <div class="logo" href="index.html">
-      <div>
-        Airowtek
-        <span class="logo-sub">Private Limited</span>
+    <div class="logo" href="index.html" onclick="window.location.href='index.html'">
+      <div style="display: flex; flex-direction: column; align-items: flex-start;">
+        <img src="asset/logo.svg" alt="Airowtek" style="height: 28px; margin-bottom: 2px;">
+        <span class="logo-sub" style="margin-top: 0;">Geospatial Intelligence</span>
       </div>
     </div>
     <div class="nav-links">
@@ -111,7 +114,8 @@
           <h2 class="service-name"><span>Photo</span>grammetry</h2>
           <p class="service-desc">
             Airowtek's photogrammetry service transforms overlapping photographs into precise, survey-grade 2D maps and
-            3D models. Leveraging advanced SfM (Structure-from-Motion) algorithms and 3D stereo compilation, we process provided imagery to
+            3D models. Leveraging advanced SfM (Structure-from-Motion) algorithms and 3D stereo compilation, we process
+            provided imagery to
             produce dense point clouds, digital surface models (DSMs), digital terrain models (DTMs), and textured 3D
             meshes.
           </p>
@@ -610,12 +614,14 @@
             </defs>
             <rect width="500" height="375" fill="url(#mm1)" />
             <!-- Conceptual Mobile Mapping Car -->
-            <path d="M150,220 L200,220 L230,180 L350,180 L380,220 L400,220 L400,260 L150,260 Z" fill="rgba(30,41,59,0.8)" stroke="rgba(26,111,255,0.4)" stroke-width="1.5" />
+            <path d="M150,220 L200,220 L230,180 L350,180 L380,220 L400,220 L400,260 L150,260 Z"
+              fill="rgba(30,41,59,0.8)" stroke="rgba(26,111,255,0.4)" stroke-width="1.5" />
             <!-- Wheels -->
             <circle cx="210" cy="260" r="20" fill="#040c1a" stroke="rgba(0,212,163,0.5)" stroke-width="2" />
             <circle cx="340" cy="260" r="20" fill="#040c1a" stroke="rgba(0,212,163,0.5)" stroke-width="2" />
             <!-- Scanner unit -->
-            <rect x="290" y="150" width="16" height="30" fill="rgba(0,212,163,0.3)" stroke="rgba(0,212,163,0.8)" stroke-width="1.5" />
+            <rect x="290" y="150" width="16" height="30" fill="rgba(0,212,163,0.3)" stroke="rgba(0,212,163,0.8)"
+              stroke-width="1.5" />
             <!-- Laser beams -->
             <g stroke="rgba(0,212,163,0.4)" stroke-width="1" stroke-dasharray="2 3">
               <line x1="298" y1="150" x2="100" y2="50" />
@@ -623,16 +629,21 @@
               <line x1="298" y1="150" x2="450" y2="80" />
               <line x1="298" y1="150" x2="480" y2="200" />
             </g>
-            <text x="250" y="340" text-anchor="middle" fill="rgba(26,111,255,0.5)" font-size="9" font-family="monospace">MOBILE LASER SCANNING — PANORAMIC ACQUISITION</text>
+            <text x="250" y="340" text-anchor="middle" fill="rgba(26,111,255,0.5)" font-size="9"
+              font-family="monospace">MOBILE LASER SCANNING — PANORAMIC ACQUISITION</text>
           </svg>
         </div>
         <div>
           <div class="service-num">06</div>
           <h2 class="service-name"><span>Mobile</span> Mapping</h2>
           <p class="service-desc">
-            Acquire survey-grade spatial data quickly and efficiently from moving platforms. Mobile mapping combines 360-degree panoramic imagery with high-density laser scanning to capture vast infrastructure networks without disrupting traffic or operations.
+            Acquire survey-grade spatial data quickly and efficiently from moving platforms. Mobile mapping combines
+            360-degree panoramic imagery with high-density laser scanning to capture vast infrastructure networks
+            without disrupting traffic or operations.
           </p>
-          <p class="service-desc">Our mobile mapping workflows extract critical features such as road topography, signage, power lines, and right-of-way assets, delivering complete city-scale 3D models and GIS databases.</p>
+          <p class="service-desc">Our mobile mapping workflows extract critical features such as road topography,
+            signage, power lines, and right-of-way assets, delivering complete city-scale 3D models and GIS databases.
+          </p>
           <div class="benefit-tags">
             <span class="tag">Street-View Panoramas</span>
             <span class="tag">Feature Extraction</span>
@@ -652,7 +663,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="logo" style="cursor:default">
-            Airowtek
+            <img src="asset/logo.svg" alt="Airowtek" style="height: 28px;">
           </div>
           <p>Precision geospatial intelligence for a smarter world. Photogrammetry, LiDAR, GIS, and BIM solutions from
             Bangalore, India.</p>

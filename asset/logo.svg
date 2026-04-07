@@ -1,0 +1,39 @@
+<svg viewBox="0 0 240 42" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Grid -->
+    <pattern id="logo-grid" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M 8 0 L 0 0 0 8" fill="none" stroke="#cbd5e1" stroke-width="0.5" />
+    </pattern>
+    <!-- Cutout for the swoosh through the 'A' -->
+    <mask id="swoosh-cutout">
+      <rect width="240" height="42" fill="white" />
+      <path d="M -5 36 Q 12 20 28 12" fill="none" stroke="black" stroke-width="4.5" />
+    </mask>
+  </defs>
+  
+  <!-- Decorative Grid Elements -->
+  <g opacity="0.7">
+    <rect x="-8" y="-8" width="120" height="58" fill="url(#logo-grid)" />
+    <!-- Subtle filled squares for technical geospatial feel -->
+    <rect x="8" y="8" width="8" height="8" fill="#f1f5f9" />
+    <rect x="16" y="0" width="8" height="8" fill="#f8fafc" />
+    <rect x="24" y="24" width="8" height="8" fill="#e2e8f0" />
+    <rect x="56" y="8" width="8" height="8" fill="#f1f5f9" />
+  </g>
+
+  <!-- Main AIROWTEK Text -->
+  <text x="0" y="34" font-family="'Outfit', system-ui, sans-serif" font-size="34" font-weight="900" fill="#2d313f" letter-spacing="0.5" mask="url(#swoosh-cutout)">AIROWTEK</text>
+  
+  <!-- Sweeping Swooshes -->
+  <!-- 3 trailing paths representing flight / tracking -->
+  <path d="M -2 36 Q 15 20 45 8" fill="none" stroke="#2d313f" stroke-width="1.8" stroke-linecap="round" />
+  <path d="M 2 40 Q 18 22 45 8" fill="none" stroke="#2d313f" stroke-width="1.1" stroke-linecap="round" />
+  <path d="M 6 44 Q 21 24 45 8" fill="none" stroke="#2d313f" stroke-width="0.6" stroke-linecap="round" />
+
+  <!-- Modern Plane / Jet Dart Vector -->
+  <g transform="translate(45, 8) rotate(-22)">
+    <path d="M -7 -3.5 L 8 0 L -7 3.5 L -4 0 Z" fill="#2d313f" />
+    <!-- Subtle accent -->
+    <polygon points="-7,-3.5 -4,0 -5,-1" fill="#00d4a3" />
+  </g>
+</svg>

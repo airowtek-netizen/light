@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Airowtek Private Limited – Precision Geospatial Solutions</title>
+  <link rel="icon" type="image/svg+xml" href="asset/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -18,10 +19,10 @@
 
   <div class="toast" id="toast">✓ Message sent successfully!</div>
   <nav id="navbar">
-    <div class="logo" href="index.html">
-      <div>
-        Airowtek
-        <span class="logo-sub">Geospatial Intelligence</span>
+    <div class="logo" href="index.html" onclick="window.location.href='index.html'">
+      <div style="display: flex; flex-direction: column; align-items: flex-start;">
+        <img src="asset/logo.svg" alt="Airowtek" style="height: 28px; margin-bottom: 2px;">
+        <span class="logo-sub" style="margin-top: 0;">Geospatial Intelligence</span>
       </div>
     </div>
     <div class="nav-links">
@@ -47,7 +48,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero-bg"
-        style="background: url('asset/banner.jpg') center/cover no-repeat; opacity: 0.5; mix-blend-mode: multiply;">
+        style="background: url('asset/banner.jpg') center/cover no-repeat; opacity: 0.35; mix-blend-mode: screen;">
       </div>
 
       <div class="hero-content">
@@ -60,7 +61,7 @@
             Mapping the Future<br>
             <span class="highlight">From Sky to Ground</span>
           </h1>
-          <p class="hero-subtitle" style="color: var(--blue-primary);">Photogrammetry · LiDAR · GIS · BIM</p>
+          <p class="hero-subtitle">Photogrammetry · LiDAR · GIS · BIM</p>
           <p class="hero-desc">
             Empowering the future with cutting-edge LiDAR, Photogrammetry, and BIM solutions.
             Transforming spatial data into actionable, high-fidelity insights for modern industries globally.
@@ -69,7 +70,7 @@
             <button class="btn btn-primary" onclick="window.location.href='services.html'">
               <i class="fas fa-rocket"></i> Explore Services
             </button>
-            <button class="btn btn-outline" onclick="window.location.href='contact.html'">
+            <button class="btn btn-outline" onclick="window.location.href='contact.html'" style="color:white">
               <i class="fas fa-envelope"></i> Contact Us
             </button>
           </div>
@@ -266,7 +267,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="logo" style="cursor:default">
-          Airowtek
+          <img src="asset/logo.svg" alt="Airowtek" style="height: 28px;">
         </div>
         <p>Precision geospatial intelligence for a smarter world. Photogrammetry, LiDAR, GIS, and BIM solutions from
           Bangalore, India.</p>
