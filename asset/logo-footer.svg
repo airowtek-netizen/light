@@ -19,7 +19,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="2.614822"
-     inkscape:cx="121.04075"
+     inkscape:cx="121.42318"
      inkscape:cy="23.902201"
      inkscape:window-width="1920"
      inkscape:window-height="1002"
@@ -74,45 +74,5 @@
      style="fill:#c5c5c5;fill-opacity:0.61851853">AIROWTEK</text>
   <!-- Sweeping Swooshes -->
   <!-- 3 trailing paths representing flight / tracking -->
-  <path
-     d="M 2,36 Q 19,20 49,8"
-     fill="none"
-     stroke="#2d313f"
-     stroke-width="1.8"
-     stroke-linecap="round"
-     id="path6"
-     style="fill:#c5c5c5;fill-opacity:0.61851853;stroke:#c9ccd9;stroke-opacity:1" />
-  <path
-     d="M 6,40 Q 22,22 49,8"
-     fill="none"
-     stroke="#2d313f"
-     stroke-width="1.1"
-     stroke-linecap="round"
-     id="path7"
-     style="fill:#c5c5c5;fill-opacity:0.61851853;stroke:#c9ccd9;stroke-opacity:1" />
-  <path
-     d="M 10,44 Q 25,24 49,8"
-     fill="none"
-     stroke="#2d313f"
-     stroke-width="0.6"
-     stroke-linecap="round"
-     id="path8"
-     style="fill:#c5c5c5;fill-opacity:0.61851853;stroke:#c9ccd9;stroke-opacity:1" />
   <!-- Modern Plane / Jet Dart Vector -->
-  <g
-     transform="rotate(-22,45.078216,-122.04157)"
-     id="g9"
-     style="fill:#c5c5c5;fill-opacity:0.61851853">
-    <path
-       d="M -7,-3.5 8,0 -7,3.5 -4,0 Z"
-       fill="#2d313f"
-       id="path9"
-       style="fill:#c5c5c5;fill-opacity:0.61851853" />
-    <!-- Subtle accent -->
-    <polygon
-       points="-4,0 -5,-1 -7,-3.5 "
-       fill="#00d4a3"
-       id="polygon9"
-       style="fill:#c5c5c5;fill-opacity:0.61851853" />
-  </g>
 </svg>
