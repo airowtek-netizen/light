@@ -18,9 +18,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="3.6979167"
-     inkscape:cx="144"
-     inkscape:cy="17.712676"
+     inkscape:zoom="5.2296439"
+     inkscape:cx="95.895631"
+     inkscape:cy="9.6564892"
      inkscape:window-width="1920"
      inkscape:window-height="1002"
      inkscape:window-x="-8"
@@ -63,13 +63,14 @@
   <text
      x="0"
      y="34"
-     font-family="'Outfit', system-ui, sans-serif"
-     font-size="34"
+     font-family="Outfit, system-ui, sans-serif"
+     font-size="34px"
      font-weight="900"
      fill="#2d313f"
      letter-spacing="0.5"
      mask="url(#swoosh-cutout)"
-     id="text6">AIROWTEK</text>
+     id="text6"
+     transform="translate(3.670264,-1.2516993)">AIROWTEK</text>
   <!-- Sweeping Swooshes -->
   <!-- 3 trailing paths representing flight / tracking -->
   <!-- Modern Plane / Jet Dart Vector -->
