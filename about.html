@@ -16,12 +16,24 @@
 </head>
 
 <body>
+  <!-- Search Popup Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-popup">
+      <div class="search-header">
+        <i class="fas fa-search search-icon-input"></i>
+        <input type="text" id="searchInput" placeholder="Search services and industries..." autocomplete="off">
+        <button class="close-search" id="closeSearch">&times;</button>
+      </div>
+      <div class="search-results" id="searchResults">
+      </div>
+    </div>
+  </div>
 
   <div class="toast" id="toast">✓ Message sent successfully!</div>
   <nav id="navbar">
     <div class="logo" href="index.html" onclick="window.location.href='index.html'">
       <div style="display: flex; flex-direction: column; align-items: flex-start;">
-        <img src="asset/logo.svg" alt="Airowtek" style="height: 28px; margin-bottom: 2px;">
+        <img src="asset/logo.svg" alt="Airowtek" style="height: 32px; margin-bottom: 2px;">
         <span class="logo-sub" style="margin-top: 0;">Geospatial Intelligence</span>
       </div>
     </div>
@@ -30,7 +42,11 @@
       <a href="about.html" id="nav-about">About</a>
       <a href="services.html" id="nav-services">Services</a>
       <a href="industries.html" id="nav-industries">Industries</a>
-      <a href="contact.html" id="nav-contact" class="nav-cta">Contact Us</a>
+      <a href="contact.html" id="nav-contact">Contact Us</a>
+    </div>
+    <div class="nav-icons">
+      <a href="#" id="searchIcon"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-globe"></i></a>
     </div>
     <div class="hamburger" id="hamburger">
       <span></span><span></span><span></span>
@@ -226,7 +242,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="logo" style="cursor:default">
-            <img src="asset/logo-footer.svg" alt="Airowtek" style="height: 28px;">
+            <img src="asset/logo-footer.svg" alt="Airowtek" style="height: 32px;">
           </div>
           <p>Precision geospatial intelligence for a smarter world. Photogrammetry, LiDAR, GIS, and BIM solutions from
             Bangalore, India.</p>
@@ -250,21 +266,21 @@
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li>Photogrammetry</li>
-            <li>LiDAR Processing</li>
-            <li>Orthophoto</li>
-            <li>CAD / GIS</li>
-            <li>Scan to BIM</li>
-            <li>Mobile Mapping</li>
+            <li><a href="services.html#photogrammetry">Photogrammetry</a></li>
+            <li><a href="services.html#lidar">LiDAR Processing</a></li>
+            <li><a href="services.html#orthophoto">Orthophoto</a></li>
+            <li><a href="services.html#cad-gis">CAD / GIS</a></li>
+            <li><a href="services.html#bim">Scan to BIM</a></li>
+            <li><a href="services.html#mobile-mapping">Mobile Mapping</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
           <ul>
-            <li><i class="fas fa-map-marker-alt" style="color:var(--green-primary)"></i> Mico Layout, Hongasandra,
+            <li><i class="fas fa-map-marker-alt" style="color:#00d4a3"></i> Mico Layout, Hongasandra,
               Bangalore</li>
-            <li><i class="fas fa-envelope" style="color:var(--green-primary)"></i> Airowtek@gmail.com</li>
-            <li><i class="fas fa-phone" style="color:var(--green-primary)"></i> +91 9886 234 522</li>
+            <li><i class="fas fa-envelope" style="color:#00d4a3"></i> Airowtek@gmail.com</li>
+            <li><i class="fas fa-phone" style="color:#00d4a3"></i> +91 9886 234 522</li>
             <li style="margin-top:16px"><span class="pill-green"><i class="fas fa-circle" style="font-size:0.5rem"></i>
                 Available for Projects</span></li>
           </ul>
@@ -282,3 +298,7 @@
 </body>
 
 </html>
+
+
+
+

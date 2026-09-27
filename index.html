@@ -80,12 +80,24 @@
 </head>
 
 <body>
+  <!-- Search Popup Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-popup">
+      <div class="search-header">
+        <i class="fas fa-search search-icon-input"></i>
+        <input type="text" id="searchInput" placeholder="Search services and industries..." autocomplete="off">
+        <button class="close-search" id="closeSearch">&times;</button>
+      </div>
+      <div class="search-results" id="searchResults">
+      </div>
+    </div>
+  </div>
 
   <div class="toast" id="toast">✓ Message sent successfully!</div>
   <nav id="navbar">
     <div class="logo" href="index.html" onclick="window.location.href='index.html'">
       <div style="display: flex; flex-direction: column; align-items: flex-start;">
-        <img src="asset/logo.svg" alt="Airowtek" style="height: 28px; margin-bottom: 2px;">
+        <img src="asset/logo.svg" alt="Airowtek" style="height: 32px; margin-bottom: 2px;">
         <span class="logo-sub" style="margin-top: 0;">Geospatial Intelligence</span>
       </div>
     </div>
@@ -94,7 +106,11 @@
       <a href="about.html" id="nav-about">About</a>
       <a href="services.html" id="nav-services">Services</a>
       <a href="industries.html" id="nav-industries">Industries</a>
-      <a href="contact.html" id="nav-contact" class="nav-cta">Contact Us</a>
+      <a href="contact.html" id="nav-contact">Contact Us</a>
+    </div>
+    <div class="nav-icons">
+      <a href="#" id="searchIcon"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="fas fa-globe"></i></a>
     </div>
     <div class="hamburger" id="hamburger">
       <span></span><span></span><span></span>
@@ -111,274 +127,250 @@
   <div class="page" id="home">
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-bg"
-        style="background: url('asset/banner.jpg') center/cover no-repeat; opacity: 0.35; mix-blend-mode: screen;">
-      </div>
+      <!-- Background video container -->
+      <video id="heroVideo" autoplay loop muted playsinline
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none;">
+        <source src="asset/banner.mp4" type="video/mp4">
+      </video>
+      <!-- Dark overlay for text readability -->
+      <!-- <div class="hero-video-overlay"></div> -->
 
+      <!-- Hero Text Overlay -->
       <div class="hero-content">
-        <div style="max-width:640px">
-          <!--  <div class="hero-eyebrow">
-            <span></span>
-            Precision Geospatial Intelligence
-          </div> -->
+        <div style="max-width:720px">
           <h1 class="hero-title">
-            Mapping the Future<br>
-            <span class="highlight">From Sky to Ground</span>
+            <br>
+            <span></span>
           </h1>
-          <p class="hero-subtitle">Photogrammetry · LiDAR · GIS · BIM</p>
+          <p class="hero-subtitle" id="dynamicSubtitle" style="min-height: 2em; transition: 0.3s ease;">
+            Infrastructure Monitoring & Asset Management</p>
           <p class="hero-desc">
-            Empowering the future with cutting-edge LiDAR, Photogrammetry, and BIM solutions.
-            Transforming spatial data into actionable, high-fidelity insights for modern industries globally.
+
           </p>
-          <div class="hero-btns">
-            <button class="btn btn-primary" onclick="window.location.href='services.html'">
-              <i class="fas fa-rocket"></i> Explore Services
-            </button>
-            <button class="btn btn-outline" onclick="window.location.href='contact.html'" style="color:white">
-              <i class="fas fa-envelope"></i> Contact Us
-            </button>
-          </div>
-          <!-- <div class="hero-stats">
-            <div class="stat-card">
-              <div class="num">500+</div>
-              <div class="label">Projects Delivered</div>
-            </div>
-            <div class="stat-card">
-              <div class="num">15+</div>
-              <div class="label">Industry Sectors</div>
-            </div>
-            <div class="stat-card">
-              <div class="num">99.8%</div>
-              <div class="label">Accuracy Rate</div>
-            </div>
-            <div class="stat-card">
-              <div class="num">8+</div>
-              <div class="label">Years of Expertise</div>
-            </div> -->
+
         </div>
       </div>
-  </div>
 
-  <div class="scroll-indicator" onclick="document.getElementById('intro').scrollIntoView()">Scroll</div>
-  </section>
+    </section>
 
-  <!-- INTRO -->
-  <section class="intro-strip" id="intro">
-    <div class="intro-inner">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
-        <div>
-          <div class="section-tag">Who We Are</div>
-          <h2 class="section-title">Precision Data That <span>Drives Decisions</span></h2>
-          <p style="color:var(--text-muted);line-height:1.85;margin-bottom:24px">
-            Airowtek is a Bangalore-based geospatial technology company specializing in 2D/3D data
-            processing,
-            photogrammetry workflows, LiDAR classification, CAD/GIS mapping, and Scan to BIM. We bridge the gap
-            between raw spatial data and actionable digital intelligence.
-          </p>
-          <p style="color:var(--text-muted);line-height:1.85;margin-bottom:32px">
-            Bringing extensive domain expertise and a team of certified geospatial engineers, we deliver survey-grade
-            accuracy at scale — from single-site models to large infrastructure corridor mapping.
-          </p>
-          <button class="btn btn-primary" onclick="window.location.href='about.html'"><i class="fas fa-arrow-right"></i>
-            Learn More About Us</button>
-        </div>
-        <div>
-          <div class="feature-row">
-            <div class="feature-item">
-              <div class="feat-icon"><i class="fas fa-satellite"></i></div>
-              <div class="feat-text">
-                <h4>Photogrammetry Processing</h4>
-                <p>High-accuracy 3D mapping and ORI generation from raw imagery</p>
+    <!-- INTRO -->
+    <section class="intro-strip" id="intro">
+      <div class="intro-inner">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
+          <div>
+            <div class="section-tag">Who We Are</div>
+            <h2 class="section-title">Precision Data That <span>Drives Decisions</span></h2>
+            <p style="color:var(--text-muted);line-height:1.85;margin-bottom:24px">
+              Airowtek is a Bangalore-based geospatial technology company specializing in 2D/3D data
+              processing,
+              photogrammetry workflows, LiDAR classification, CAD/GIS mapping, and Scan to BIM. We bridge the gap
+              between raw spatial data and actionable digital intelligence.
+            </p>
+            <p style="color:var(--text-muted);line-height:1.85;margin-bottom:32px">
+              Bringing extensive domain expertise and a team of certified geospatial engineers, we deliver survey-grade
+              accuracy at scale — from single-site models to large infrastructure corridor mapping.
+            </p>
+            <button class="btn btn-primary" onclick="window.location.href='about.html'"><i
+                class="fas fa-arrow-right"></i>
+              Learn More About Us</button>
+          </div>
+          <div>
+            <div class="feature-row">
+              <div class="feature-item">
+                <div class="feat-icon"><i class="fas fa-satellite"></i></div>
+                <div class="feat-text">
+                  <h4>Photogrammetry Processing</h4>
+                  <p>High-accuracy 3D mapping and ORI generation from raw imagery</p>
+                </div>
               </div>
-            </div>
-            <div class="feature-item">
-              <div class="feat-icon"><i class="fas fa-layer-group"></i></div>
-              <div class="feat-text">
-                <h4>Lidar Classification</h4>
-                <p>High-density point clouds with accurate ground and detailed classification.</p>
+              <div class="feature-item">
+                <div class="feat-icon"><i class="fas fa-layer-group"></i></div>
+                <div class="feat-text">
+                  <h4>Lidar Classification</h4>
+                  <p>High-density point clouds with accurate ground and detailed classification.</p>
+                </div>
               </div>
-            </div>
-            <div class="feature-item">
-              <div class="feat-icon"><i class="fas fa-map-marked-alt"></i></div>
-              <div class="feat-text">
-                <h4>GIS Analytics</h4>
-                <p>Spatial analysis, change detection, and custom GIS dashboards.</p>
+              <div class="feature-item">
+                <div class="feat-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <div class="feat-text">
+                  <h4>GIS Analytics</h4>
+                  <p>Spatial analysis, change detection, and custom GIS dashboards.</p>
+                </div>
               </div>
-            </div>
-            <div class="feature-item">
-              <div class="feat-icon"><i class="fas fa-building"></i></div>
-              <div class="feat-text">
-                <h4>Scan to BIM</h4>
-                <p>As-built BIM models conforming to LOD 300–400 standards.</p>
+              <div class="feature-item">
+                <div class="feat-icon"><i class="fas fa-building"></i></div>
+                <div class="feat-text">
+                  <h4>Scan to BIM</h4>
+                  <p>As-built BIM models conforming to LOD 300–400 standards.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SERVICES PREVIEW -->
-  <section class="section">
-    <div style="max-width:1200px;margin:0 auto">
-      <div class="section-header text-center">
-        <div class="section-tag">What We Do</div>
-        <h2 class="section-title">Our Core <span>Services</span></h2>
-        <p class="section-lead">Specialized data processing and 2D/3D mapping services powered by intelligent
-          processing workflows.</p>
+    <!-- SERVICES PREVIEW -->
+    <section class="section">
+      <div style="max-width:1200px;margin:0 auto">
+        <div class="section-header text-center">
+          <div class="section-tag">What We Do</div>
+          <h2 class="section-title">Our Core <span>Services</span></h2>
+          <p class="section-lead">Specialized data processing and 2D/3D mapping services powered by intelligent
+            processing workflows.</p>
+        </div>
+        <div class="services-preview-grid">
+          <div class="srv-card" onclick="window.location.href='services.html'">
+            <img src="asset/home_srv_photogrammetry_1790360968047.jpg" alt="Photogrammetry" class="srv-img">
+            <h3>Photogrammetry</h3>
+            <p>Raw imagery transformed into accurate 2D/3D spatial datasets and maps.</p>
+          </div>
+          <div class="srv-card" onclick="window.location.href='services.html'">
+            <img src="asset/home_srv_lidar_1790360980997.jpg" alt="LiDAR Processing" class="srv-img">
+            <h3>LiDAR Processing</h3>
+            <p>Processing dense 3D point clouds for terrain, vegetation, and structures with mm precision.</p>
+          </div>
+          <div class="srv-card" onclick="window.location.href='services.html'">
+            <img src="asset/home_srv_ortho_1790360994892.jpg" alt="Orthophoto" class="srv-img">
+            <h3>Orthophoto</h3>
+            <p>Geo-referenced, distortion-free Ortho rectified imagery for planning and asset management.</p>
+          </div>
+          <div class="srv-card" onclick="window.location.href='services.html'">
+            <img src="asset/home_srv_gis_1790361008824.jpg" alt="CAD / GIS" class="srv-img">
+            <h3>CAD / GIS</h3>
+            <p>Survey-grade CAD deliverables and GIS-ready spatial data for engineering use.</p>
+          </div>
+          <div class="srv-card" onclick="window.location.href='services.html'">
+            <img src="asset/home_srv_bim_1790361019150.jpg" alt="BIM" class="srv-img">
+            <h3>BIM</h3>
+            <p>As-built Building Information Models for infrastructure and construction projects.</p>
+          </div>
+          <div class="srv-card" onclick="window.location.href='services.html'">
+            <img src="asset/home_srv_mobile_1790361031391.jpg" alt="Mobile Mapping" class="srv-img">
+            <h3>Mobile Mapping</h3>
+            <p>High-resolution panoramic imagery and point clouds classification and mapping for vast areas.</p>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:40px">
+          <button class="btn btn-outline" onclick="window.location.href='services.html'"><i
+              class="fas fa-arrow-right"></i> View All Services</button>
+        </div>
       </div>
-      <div class="services-preview-grid">
-        <div class="srv-card" onclick="window.location.href='services.html'">
-          <div class="srv-icon">🛩️</div>
-          <h3>Photogrammetry</h3>
-          <p>Raw imagery transformed into accurate 2D/3D spatial datasets and maps.</p>
-        </div>
-        <div class="srv-card" onclick="window.location.href='services.html'">
-          <div class="srv-icon">🔦</div>
-          <h3>LiDAR Processing</h3>
-          <p>Processing dense 3D point clouds for terrain, vegetation, and structures with mm precision.</p>
-        </div>
-        <div class="srv-card" onclick="window.location.href='services.html'">
-          <div class="srv-icon">🗺️</div>
-          <h3>Orthophoto</h3>
-          <p>Geo-referenced, distortion-free Ortho rectified imagery for planning and asset management.</p>
-        </div>
-        <div class="srv-card" onclick="window.location.href='services.html'">
-          <div class="srv-icon">📐</div>
-          <h3>CAD / GIS</h3>
-          <p>Survey-grade CAD deliverables and GIS-ready spatial data for engineering use.</p>
-        </div>
-        <div class="srv-card" onclick="window.location.href='services.html'">
-          <div class="srv-icon">🏗️</div>
-          <h3>BIM</h3>
-          <p>As-built Building Information Models for infrastructure and construction projects.</p>
-        </div>
-        <div class="srv-card" onclick="window.location.href='services.html'">
-          <div class="srv-icon">🚗</div>
-          <h3>Mobile Mapping</h3>
-          <p>High-resolution panoramic imagery and point clouds classification and mapping for vast areas.</p>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:40px">
-        <button class="btn btn-outline" onclick="window.location.href='services.html'"><i
-            class="fas fa-arrow-right"></i> View All Services</button>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="divider"></div>
+    <div class="divider"></div>
 
-  <!-- INDUSTRIES PREVIEW -->
-  <section class="section">
-    <div style="max-width:1200px;margin:0 auto">
-      <div class="section-header text-center">
-        <div class="section-tag">Our Reach</div>
-        <h2 class="section-title">Industries We <span>Serve</span></h2>
+    <!-- INDUSTRIES PREVIEW -->
+    <section class="section">
+      <div style="max-width:1200px;margin:0 auto">
+        <div class="section-header text-center">
+          <div class="section-tag">Our Reach</div>
+          <h2 class="section-title">Industries We <span>Serve</span></h2>
+        </div>
+        <div class="grid-3">
+          <div class="srv-card" onclick="window.location.href='industries.html'">
+            <img src="asset/home_ind_infrastructure_1790361056056.jpg" alt="Infrastructure" class="srv-img">
+            <h3>Infrastructure</h3>
+            <p>Road networks, highways, railways, bridges, and corridor mapping operations.</p>
+          </div>
+          <div class="srv-card" onclick="window.location.href='industries.html'">
+            <img src="asset/home_ind_urban_1790361069208.jpg" alt="Urban Planning" class="srv-img">
+            <h3>Urban Planning</h3>
+            <p>Land parcel preparation, complete city mapping, and LOD2 for urban planning.</p>
+          </div>
+          <div class="srv-card" onclick="window.location.href='industries.html'">
+            <img src="asset/home_ind_mining_1790361080698.jpg" alt="Mining" class="srv-img">
+            <h3>Mining</h3>
+            <p>Open-pit volume calculations, haul road surveys, and stockpile monitoring.</p>
+          </div>
+          <div class="srv-card" onclick="window.location.href='industries.html'">
+            <img src="asset/home_ind_agriculture_1790390931180.jpg" alt="Agriculture" class="srv-img">
+            <h3>Agriculture</h3>
+            <p>Crop health monitoring, NDVI mapping, and precision farming intelligence.</p>
+          </div>
+          <div class="srv-card" onclick="window.location.href='industries.html'">
+            <img src="asset/home_ind_smartcity_1790390946255.jpg" alt="Smart Cities" class="srv-img">
+            <h3>Smart Cities</h3>
+            <p>3D city modelling, utility GIS, and digital twin data mapping.</p>
+          </div>
+          <div class="srv-card" onclick="window.location.href='industries.html'">
+            <img src="asset/home_ind_utilities_1790390957984.jpg" alt="Utilities" class="srv-img">
+            <h3>Utilities</h3>
+            <p>Transmission line surveys, pipeline corridor mapping, and asset inventory.</p>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:40px">
+          <button class="btn btn-outline" onclick="window.location.href='industries.html'"><i
+              class="fas fa-arrow-right"></i> View All Industries</button>
+        </div>
       </div>
-      <div class="grid-3">
-        <div class="srv-card" onclick="window.location.href='industries.html'">
-          <div class="srv-icon" style="color:var(--green-primary)"><i class="fas fa-road"></i></div>
-          <h3>Infrastructure</h3>
-          <p>Road networks, highways, railways, bridges, and corridor mapping operations.</p>
-        </div>
-        <div class="srv-card" onclick="window.location.href='industries.html'">
-          <div class="srv-icon" style="color:var(--blue-primary)"><i class="fas fa-city"></i></div>
-          <h3>Urban Planning</h3>
-          <p>Land parcel preparation, complete city mapping, and LOD2 for urban planning3.</p>
-        </div>
-        <div class="srv-card" onclick="window.location.href='industries.html'">
-          <div class="srv-icon" style="color:#f59e0b"><i class="fas fa-mountain"></i></div>
-          <h3>Mining</h3>
-          <p>Open-pit volume calculations, haul road surveys, and stockpile monitoring.</p>
-        </div>
-        <div class="srv-card" onclick="window.location.href='industries.html'">
-          <div class="srv-icon" style="color:#22c55e"><i class="fas fa-seedling"></i></div>
-          <h3>Agriculture</h3>
-          <p>Crop health monitoring, NDVI mapping, and precision farming intelligence.</p>
-        </div>
-        <div class="srv-card" onclick="window.location.href='industries.html'">
-          <div class="srv-icon" style="color:var(--green-primary)"><i class="fas fa-network-wired"></i></div>
-          <h3>Smart Cities</h3>
-          <p>3D city modelling, utility GIS, and digital twin data mapping.</p>
-        </div>
-        <div class="srv-card" onclick="window.location.href='industries.html'">
-          <div class="srv-icon" style="color:#f59e0b"><i class="fas fa-bolt"></i></div>
-          <h3>Utilities</h3>
-          <p>Transmission line surveys, pipeline corridor mapping, and asset inventory.</p>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:40px">
-        <button class="btn btn-outline" onclick="window.location.href='industries.html'"><i
-            class="fas fa-arrow-right"></i> View All Industries</button>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA SECTION -->
-  <div class="cta-section" style="max-width:1200px;margin:0 auto 80px">
-    <div class="section-tag" style="justify-content:center;margin-bottom:12px">Get Started</div>
-    <h2 class="section-title" style="margin-bottom:16px">Ready to Map and process Your <span>Next Project?</span></h2>
-    <p style="color:var(--text-muted);max-width:520px;margin:0 auto 36px;line-height:1.8">From initial consultation to
-      final deliverables — Airowtek provides a seamless geospatial workflow tailored to your project needs.</p>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-      <button class="btn btn-primary" onclick="window.location.href='contact.html'"><i class="fas fa-paper-plane"></i>
-        Request a Quote</button>
-      <button class="btn btn-outline" onclick="window.location.href='services.html'"><i class="fas fa-search"></i>
-        Explore Services</button>
+    <!-- CTA SECTION -->
+    <div class="cta-section">
+      <div class="section-tag" style="justify-content:center;margin-bottom:12px">Get Started</div>
+      <h2 class="section-title" style="margin-bottom:16px">Ready to Map and process Your <span>Next Project?</span></h2>
+      <p style="color:var(--text-muted);max-width:520px;margin:0 auto 36px;line-height:1.8">From initial consultation to
+        final deliverables — Airowtek provides a seamless geospatial workflow tailored to your project needs.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-primary" onclick="window.location.href='contact.html'"><i class="fas fa-paper-plane"></i>
+          Request a Quote</button>
+        <button class="btn btn-outline" onclick="window.location.href='services.html'"><i class="fas fa-search"></i>
+          Explore Services</button>
+      </div>
     </div>
-  </div>
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo" style="cursor:default">
-          <img src="asset/logo-footer.svg" alt="Airowtek" style="height: 28px;">
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="cursor:default">
+            <img src="asset/logo-footer.svg" alt="Airowtek" style="height: 32px;">
+          </div>
+          <p>Precision geospatial intelligence for a smarter world. Photogrammetry, LiDAR, GIS, and BIM solutions from
+            Bangalore, India.</p>
+          <div class="footer-social">
+            <a class="social-btn" href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-btn" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="social-btn" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="social-btn" href="#"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
-        <p>Precision geospatial intelligence for a smarter world. Photogrammetry, LiDAR, GIS, and BIM solutions from
-          Bangalore, India.</p>
-        <div class="footer-social">
-          <a class="social-btn" href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a class="social-btn" href="#"><i class="fab fa-twitter"></i></a>
-          <a class="social-btn" href="#"><i class="fab fa-instagram"></i></a>
-          <a class="social-btn" href="#"><i class="fab fa-youtube"></i></a>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#photogrammetry">Photogrammetry</a></li>
+            <li><a href="services.html#lidar">LiDAR Processing</a></li>
+            <li><a href="services.html#orthophoto">Orthophoto</a></li>
+            <li><a href="services.html#cad-gis">CAD / GIS</a></li>
+            <li><a href="services.html#bim">Scan to BIM</a></li>
+            <li><a href="services.html#mobile-mapping">Mobile Mapping</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt" style="color:#00d4a3"></i> Mico Layout, Hongasandra,
+              Bangalore</li>
+            <li><i class="fas fa-envelope" style="color:#00d4a3"></i> info@airowtek.com</li>
+            <li><i class="fas fa-phone" style="color:#00d4a3"></i> +91 9886 234 522</li>
+            <li style="margin-top:16px"><span class="pill-green"><i class="fas fa-circle" style="font-size:0.5rem"></i>
+                Available for Projects</span></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="industries.html">Industries</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <p>© 2026 Airowtek. All rights reserved.</p>
       </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li>Photogrammetry</li>
-          <li>LiDAR Processing</li>
-          <li>Orthophoto</li>
-          <li>CAD / GIS</li>
-          <li>Scan to BIM</li>
-          <li>Mobile Mapping</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><i class="fas fa-map-marker-alt" style="color:var(--green-primary)"></i> Mico Layout, Hongasandra,
-            Bangalore</li>
-          <li><i class="fas fa-envelope" style="color:var(--green-primary)"></i> info@airowtek.com</li>
-          <li><i class="fas fa-phone" style="color:var(--green-primary)"></i> +91 9886 234 522</li>
-          <li style="margin-top:16px"><span class="pill-green"><i class="fas fa-circle" style="font-size:0.5rem"></i>
-              Available for Projects</span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Airowtek. All rights reserved.</p>
-    </div>
-  </footer>
+    </footer>
   </div>
 
 
